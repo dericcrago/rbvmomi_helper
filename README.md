@@ -1,5 +1,7 @@
 # RbvmomiHelper
 
+[![Build Status](https://travis-ci.org/dericcrago/rbvmomi_helper.svg?branch=master)](https://travis-ci.org/dericcrago/rbvmomi_helper)
+
 A set of helper methods for [RbVmomi](https://github.com/vmware/rbvmomi).
 
 ## Installation
