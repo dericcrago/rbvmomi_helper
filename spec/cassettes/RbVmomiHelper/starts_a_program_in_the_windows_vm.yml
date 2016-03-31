@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vcenter.yourdomain.here/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><RetrieveProperties
+        xmlns="urn:vim25"><_this type="PropertyCollector">propertyCollector</_this><specSet
+        xsi:type="PropertyFilterSpec"><propSet xsi:type="PropertySpec"><type>GuestOperationsManager</type><pathSet>processManager</pathSet></propSet><objectSet
+        xsi:type="ObjectSpec"><obj type="GuestOperationsManager">guestOperationsManager</obj></objectSet></specSet></RetrieveProperties></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52610366-8a11-9661-4300-44d79a44679b"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 15:51:27 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '635'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <RetrievePropertiesResponse xmlns="urn:vim25"><returnval><obj type="GuestOperationsManager">guestOperationsManager</obj><propSet><name>processManager</name><val type="GuestProcessManager" xsi:type="ManagedObjectReference">guestOperationsProcessManager</val></propSet></returnval></RetrievePropertiesResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 15:52:16 GMT
+- request:
+    method: post
+    uri: https://vcenter.yourdomain.here/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><StartProgramInGuest
+        xmlns="urn:vim25"><_this type="GuestProcessManager">guestOperationsProcessManager</_this><vm
+        type="VirtualMachine">vm-2161</vm><auth xsi:type="NamePasswordAuthentication"><interactiveSession>0</interactiveSession><username>Administrator</username><password>vmware</password></auth><spec
+        xsi:type="GuestProgramSpec"><programPath>C:\sleep.bat</programPath><arguments></arguments></spec></StartProgramInGuest></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52610366-8a11-9661-4300-44d79a44679b"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 15:51:28 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '431'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <StartProgramInGuestResponse xmlns="urn:vim25"><returnval>2372</returnval></StartProgramInGuestResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 15:52:16 GMT
+recorded_with: VCR 3.0.1

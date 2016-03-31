@@ -1,0 +1,195 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vcenter.yourdomain.here/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><RetrieveProperties
+        xmlns="urn:vim25"><_this type="PropertyCollector">propertyCollector</_this><specSet
+        xsi:type="PropertyFilterSpec"><propSet xsi:type="PropertySpec"><type>GuestOperationsManager</type><pathSet>fileManager</pathSet></propSet><objectSet
+        xsi:type="ObjectSpec"><obj type="GuestOperationsManager">guestOperationsManager</obj></objectSet></specSet></RetrieveProperties></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52610366-8a11-9661-4300-44d79a44679b"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 15:51:25 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '626'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <RetrievePropertiesResponse xmlns="urn:vim25"><returnval><obj type="GuestOperationsManager">guestOperationsManager</obj><propSet><name>fileManager</name><val type="GuestFileManager" xsi:type="ManagedObjectReference">guestOperationsFileManager</val></propSet></returnval></RetrievePropertiesResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 15:52:14 GMT
+- request:
+    method: post
+    uri: https://vcenter.yourdomain.here/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><RetrieveProperties
+        xmlns="urn:vim25"><_this type="PropertyCollector">propertyCollector</_this><specSet
+        xsi:type="PropertyFilterSpec"><propSet xsi:type="PropertySpec"><type>VirtualMachine</type><pathSet>guest</pathSet></propSet><objectSet
+        xsi:type="ObjectSpec"><obj type="VirtualMachine">vm-2161</obj></objectSet></specSet></RetrieveProperties></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52610366-8a11-9661-4300-44d79a44679b"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 15:51:26 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '3381'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <RetrievePropertiesResponse xmlns="urn:vim25"><returnval><obj type="VirtualMachine">vm-2161</obj><propSet><name>guest</name><val xsi:type="GuestInfo"><toolsStatus>toolsOk</toolsStatus><toolsVersionStatus>guestToolsCurrent</toolsVersionStatus><toolsVersionStatus2>guestToolsCurrent</toolsVersionStatus2><toolsRunningStatus>guestToolsRunning</toolsRunningStatus><toolsVersion>9355</toolsVersion><guestId>windows8Server64Guest</guestId><guestFamily>windowsGuest</guestFamily><guestFullName>Microsoft Windows Server 2012 (64-bit)</guestFullName><hostName>windowsvm</hostName><ipAddress>169.254.64.42</ipAddress><net><network>VM Network</network><ipAddress>fe80::389b:5a6b:1fd:402a</ipAddress><ipAddress>169.254.64.42</ipAddress><macAddress>00:50:56:a8:9b:fd</macAddress><connected>true</connected><deviceConfigId>4000</deviceConfigId><dnsConfig><dhcp>false</dhcp><hostName></hostName><domainName></domainName><ipAddress>fec0:0:0:ffff::1</ipAddress><ipAddress>fec0:0:0:ffff::2</ipAddress><ipAddress>fec0:0:0:ffff::3</ipAddress></dnsConfig><ipConfig><ipAddress><ipAddress>fe80::389b:5a6b:1fd:402a</ipAddress><prefixLength>64</prefixLength><origin>linklayer</origin><state>unknown</state></ipAddress><ipAddress><ipAddress>169.254.64.42</ipAddress><prefixLength>16</prefixLength><origin>linklayer</origin><state>preferred</state></ipAddress><dhcp><ipv4><enable>true</enable></ipv4></dhcp></ipConfig></net><ipStack><dnsConfig><dhcp>false</dhcp><hostName>windowsvm</hostName><domainName></domainName><ipAddress>fec0:0:0:ffff::1</ipAddress><ipAddress>fec0:0:0:ffff::2</ipAddress><ipAddress>fec0:0:0:ffff::3</ipAddress></dnsConfig><ipRouteConfig><ipRoute><network>169.254.0.0</network><prefixLength>16</prefixLength><gateway><device>0</device></gateway></ipRoute><ipRoute><network>169.254.64.42</network><prefixLength>32</prefixLength><gateway><device>0</device></gateway></ipRoute><ipRoute><network>169.254.255.255</network><prefixLength>32</prefixLength><gateway><device>0</device></gateway></ipRoute><ipRoute><network>224.0.0.0</network><prefixLength>4</prefixLength><gateway><device>0</device></gateway></ipRoute><ipRoute><network>255.255.255.255</network><prefixLength>32</prefixLength><gateway><device>0</device></gateway></ipRoute><ipRoute><network>fe80::</network><prefixLength>64</prefixLength><gateway><device>0</device></gateway></ipRoute><ipRoute><network>fe80::389b:5a6b:1fd:402a</network><prefixLength>128</prefixLength><gateway><device>0</device></gateway></ipRoute><ipRoute><network>ff00::</network><prefixLength>8</prefixLength><gateway><device>0</device></gateway></ipRoute></ipRouteConfig></ipStack><disk><diskPath>C:\</diskPath><capacity>107005079552</capacity><freeSpace>95679225856</freeSpace></disk><screen><width>800</width><height>600</height></screen><guestState>running</guestState><appHeartbeatStatus>appStatusGray</appHeartbeatStatus><appState>none</appState><guestOperationsReady>true</guestOperationsReady><interactiveGuestOperationsReady>false</interactiveGuestOperationsReady></val></propSet></returnval></RetrievePropertiesResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 15:52:14 GMT
+- request:
+    method: post
+    uri: https://vcenter.yourdomain.here/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><InitiateFileTransferToGuest
+        xmlns="urn:vim25"><_this type="GuestFileManager">guestOperationsFileManager</_this><vm
+        type="VirtualMachine">vm-2161</vm><auth xsi:type="NamePasswordAuthentication"><interactiveSession>0</interactiveSession><username>Administrator</username><password>vmware</password></auth><guestFilePath>C:\sleep.bat</guestFilePath><fileAttributes
+        xsi:type="GuestWindowsFileAttributes"></fileAttributes><fileSize>37</fileSize><overwrite>1</overwrite></InitiateFileTransferToGuest></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52610366-8a11-9661-4300-44d79a44679b"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 15:51:26 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '535'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <InitiateFileTransferToGuestResponse xmlns="urn:vim25"><returnval>https://192.168.1.108:443/guestFile?id=143&amp;token=52cc5787-23a0-4448-6b4c-0b969db7b56a143</returnval></InitiateFileTransferToGuestResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 15:52:15 GMT
+- request:
+    method: put
+    uri: https://192.168.1.108/guestFile?id=143&token=52cc5787-23a0-4448-6b4c-0b969db7b56a143
+    body:
+      encoding: UTF-8
+      string: "@ECHO OFF\r\n\r\ntimeout /t 60 /nobreak\r\n"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - multipart/form-data
+      Content-Length:
+      - 37
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 15:48:43 GMT
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '33'
+    body:
+      encoding: UTF-8
+      string: Successfully transferred the file
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 15:52:15 GMT
+recorded_with: VCR 3.0.1

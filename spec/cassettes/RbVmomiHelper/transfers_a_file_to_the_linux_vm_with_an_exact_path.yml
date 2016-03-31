@@ -1,0 +1,198 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vcenter.yourdomain.here/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><RetrieveProperties
+        xmlns="urn:vim25"><_this type="PropertyCollector">propertyCollector</_this><specSet
+        xsi:type="PropertyFilterSpec"><propSet xsi:type="PropertySpec"><type>GuestOperationsManager</type><pathSet>fileManager</pathSet></propSet><objectSet
+        xsi:type="ObjectSpec"><obj type="GuestOperationsManager">guestOperationsManager</obj></objectSet></specSet></RetrieveProperties></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52610366-8a11-9661-4300-44d79a44679b"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 15:51:20 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '626'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <RetrievePropertiesResponse xmlns="urn:vim25"><returnval><obj type="GuestOperationsManager">guestOperationsManager</obj><propSet><name>fileManager</name><val type="GuestFileManager" xsi:type="ManagedObjectReference">guestOperationsFileManager</val></propSet></returnval></RetrievePropertiesResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 15:52:09 GMT
+- request:
+    method: post
+    uri: https://vcenter.yourdomain.here/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><RetrieveProperties
+        xmlns="urn:vim25"><_this type="PropertyCollector">propertyCollector</_this><specSet
+        xsi:type="PropertyFilterSpec"><propSet xsi:type="PropertySpec"><type>VirtualMachine</type><pathSet>guest</pathSet></propSet><objectSet
+        xsi:type="ObjectSpec"><obj type="VirtualMachine">vm-2160</obj></objectSet></specSet></RetrieveProperties></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52610366-8a11-9661-4300-44d79a44679b"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 15:51:20 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1672'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <RetrievePropertiesResponse xmlns="urn:vim25"><returnval><obj type="VirtualMachine">vm-2160</obj><propSet><name>guest</name><val xsi:type="GuestInfo"><toolsStatus>toolsOk</toolsStatus><toolsVersionStatus>guestToolsUnmanaged</toolsVersionStatus><toolsVersionStatus2>guestToolsUnmanaged</toolsVersionStatus2><toolsRunningStatus>guestToolsRunning</toolsRunningStatus><toolsVersion>2147483647</toolsVersion><guestId>rhel7_64Guest</guestId><guestFamily>linuxGuest</guestFamily><guestFullName>Red Hat Enterprise Linux 7 (64-bit)</guestFullName><hostName>linuxvm.yourdomain.here</hostName><net><network>VM Network</network><macAddress>00:50:56:a8:cf:bd</macAddress><connected>true</connected><deviceConfigId>4000</deviceConfigId><ipConfig></ipConfig></net><ipStack><dnsConfig><dhcp>false</dhcp><hostName>linuxvm.yourdomain.here</hostName><domainName>yourdomain.here</domainName><ipAddress>127.0.0.1</ipAddress><searchDomain>yourdomain.here</searchDomain></dnsConfig><ipRouteConfig></ipRouteConfig></ipStack><screen><width>1280</width><height>768</height></screen><guestState>running</guestState><appHeartbeatStatus>appStatusGray</appHeartbeatStatus><appState>none</appState><guestOperationsReady>true</guestOperationsReady><interactiveGuestOperationsReady>false</interactiveGuestOperationsReady></val></propSet></returnval></RetrievePropertiesResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 15:52:09 GMT
+- request:
+    method: post
+    uri: https://vcenter.yourdomain.here/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><InitiateFileTransferToGuest
+        xmlns="urn:vim25"><_this type="GuestFileManager">guestOperationsFileManager</_this><vm
+        type="VirtualMachine">vm-2160</vm><auth xsi:type="NamePasswordAuthentication"><interactiveSession>0</interactiveSession><username>root</username><password>vmware</password></auth><guestFilePath>/tmp/sleep.sh</guestFilePath><fileAttributes
+        xsi:type="GuestPosixFileAttributes"></fileAttributes><fileSize>27</fileSize><overwrite>1</overwrite></InitiateFileTransferToGuest></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52610366-8a11-9661-4300-44d79a44679b"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 15:51:21 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '535'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <InitiateFileTransferToGuestResponse xmlns="urn:vim25"><returnval>https://192.168.1.106:443/guestFile?id=159&amp;token=52e43d9d-85f9-6357-7b75-e529992609e1159</returnval></InitiateFileTransferToGuestResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 15:52:09 GMT
+- request:
+    method: put
+    uri: https://192.168.1.106/guestFile?id=159&token=52e43d9d-85f9-6357-7b75-e529992609e1159
+    body:
+      encoding: UTF-8
+      string: |
+        #!/bin/bash
+
+        /bin/sleep 60
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - multipart/form-data
+      Content-Length:
+      - 27
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 15:48:37 GMT
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '33'
+    body:
+      encoding: UTF-8
+      string: Successfully transferred the file
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 15:52:10 GMT
+recorded_with: VCR 3.0.1
