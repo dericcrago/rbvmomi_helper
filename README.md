@@ -1,5 +1,7 @@
 # RbVmomiHelper
 
+[![Join the chat at https://gitter.im/dericcrago/rbvmomi_helper](https://badges.gitter.im/dericcrago/rbvmomi_helper.svg)](https://gitter.im/dericcrago/rbvmomi_helper?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/dericcrago/rbvmomi_helper.svg?branch=master)](https://travis-ci.org/dericcrago/rbvmomi_helper)
 [![codecov.io](https://codecov.io/github/dericcrago/rbvmomi_helper/coverage.svg?branch=master)](https://codecov.io/github/dericcrago/rbvmomi_helper?branch=master)
 
